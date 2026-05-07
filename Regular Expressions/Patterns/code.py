@@ -1,0 +1,14 @@
+import re
+
+def main():
+    code = input("Hexadecimal color code: ")
+
+    pattern = r"^#[a-zA-Z0-9]{6}"
+    match = re.search(pattern, code)
+    if match:
+        print(f"Valid. Match with {match.group()}")
+    else:
+        print("Invalid.")
+
+
+main()
